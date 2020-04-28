@@ -1,26 +1,69 @@
 // 1. Set the variable `givenName` to the string "Addison".
-
+let givenName = "Addison";
 // 2. Set candies equal to 20, people to 6, and leftover equal
 // to the remainder of dividing 20 by 6.
+let candies = 20;
+let people = 6;
+let leftover = 20 % 6;
 
 // 3. Create a function called greeting that returns "Hello, <name>!",
 // where <name> is the name given as an argument to the function.
+
+function greeting(name) {
+  return "Hello, " + name + "!";
+}
 
 // 4. Create a function called isOdd that, given a number, will
 // return true if it is odd and false if it is not. An odd number is a
 // number which, when divided by 2, has a remainder of 1 or -1.
 
+function isOdd(num) {
+  if (num % 2 === 1) {
+    return true;
+  } else if (num % 2 === -1) {
+    return true;
+  } else if (num % 2 === 0) {
+    return false;
+  } else if (Number.isInteger(num) === false) {
+    return false;
+  }
+}
+
 // 5. Create a function called isEven that, given a number, will
 // return true if it is even and false if it is not. An even number is a
 // number which, when divided by 2, has a remainder of 0.
+
+function isEven(num) {
+  if (num % 2 === 1) {
+    return false;
+  } else if (num % 2 === 0) {
+    return true;
+  } else if (Number.isInteger(num)) {
+    return true;
+  } else if (!Number.isInteger(num)) {
+    return false;
+  }
+}
+
+// used double negative because i didn't remember single negative
+// } else if (Number.isInteger(num) === false) {
+//   return false;
+// }
 
 // 6. Create a function called fahrenheitToCelsius that takes a
 // Fahrenheit temperature as an argument and returns the
 // temperature in Celsius.
 
+function fahrenheitToCelsius(num) {
+  return (num - 32) / 1.8;
+}
+
 // 6. Create a function called celsiusToFahrenheit that takes a
 // Celsius temperature as an argument and returns the
 // temperature in Fahrenheit.
+function celsiusToFahrenheit(num) {
+  return num * 1.8 + 32;
+}
 
 // 7. Create a function called fahrenheitToKelvin that takes a
 // Fahrenheit temperature as an argument and returns the
@@ -29,9 +72,19 @@
 // Absolute zero (0 K) is equivalent to −273.15 C.
 // 1 degree Kelvin equals 1 degree Celsius.
 
+function fahrenheitToKelvin(num) {
+  return (num - 32) / 1.8 + 273.15;
+}
+
 // 8. Create a function called lesser that takes two numbers as
 // arguments and returns the lesser of them. This function should
 // use an if/else statement.
+
+// used the wrong formula but can't figure out the right one
+
+function lesser(num1, num2) {
+  return Math.min(num1, num2);
+}
 
 // 9. Create a function called multigreeting that takes a name
 // and a language code and returns a version of "Hello, <name>!"
@@ -45,6 +98,9 @@
 //
 // If any other language code is used, return nothing.
 
+function multigreeting(code, name) {
+  return Hello + name + "!";
+}
 // 10. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
 // is the largest integer that, given two other integers, can be divided into them. For
 // example, the greatest common divisor of 24 and 81 is 3. The greatest common divisor of
